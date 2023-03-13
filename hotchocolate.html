@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chocolate ☕</title>
+
+    <style>
+      h1 {
+        color: white;
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+        border: 1px solid white;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 4px;
+        color: #ffff;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 15px;
+        margin: 20px 0 10px;
+        text-align: justify;
+        color: #ffff;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        background: #754b3d;
+        color: #ffff;
+        font-size: 20px;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 6px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px 60px;
+        background: linear-gradient(
+          87.4deg,
+          rgb(255, 241, 165) 1.9%,
+          rgb(200, 125, 76) 49.7%,
+          rgb(83, 54, 54) 100.5%
+        );
+      }
+      .learn-more {
+        text-decoration: none;
+        color: brown;
+        font-size: 14px;
+      }
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        text-align: center;
+      }
+      .author {
+        color: brown;
+      }
+
+      .buy-button {
+        font-weight: bolder;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I love Chocolate</h1>
+      <h2>Especially Hot Chocolate</h2>
+
+      <hr />
+      <img
+        src="https://th.bing.com/th/id/R.80f3689dcccca6c5034f951d91cd8615?rik=YkBSJJQAuxIw%2fA&riu=http%3a%2f%2fwww.chatelaine.com%2fwp-content%2fuploads%2f2011%2f04%2f461ba9a44065acfa2bce826b645b.jpeg&ehk=FFAKXRHx5VY0Td4PN9W0Gq5Ry%2fvzuW%2fnxHDtL2FOJVU%3d&risl=&pid=ImgRaw&r=0"
+        alt="Cocoa"
+        width="300"
+      />
+      <hr />
+
+      <p>
+        <strong>Chocolate</strong>
+        is a food made from roasted and ground cacao seed kernels that is
+        available as a liquid, solid, or paste, either on its own or as a
+        flavoring agent in other foods. Cacao has been consumed in some form
+        since at least the Olmec civilization (19th-11th century BCE) and the
+        majority of Mesoamerican people ─ including the Maya and Aztecs ─ made
+        chocolate beverages.
+
+        <br />
+        The seeds of the cacao tree have an intense bitter taste and must be
+        fermented to develop the flavor. After fermentation, the seeds are
+        dried, cleaned, and roasted. The shell is removed to produce cocoa nibs,
+        which are then ground to cocoa mass, unadulterated chocolate in rough
+        form. Once the cocoa mass is liquefied by heating, it is called
+        chocolate liquor. The liquor may also be cooled and processed into its
+        two components: cocoa solids and cocoa butter. Baking chocolate, also
+        called bitter chocolate, contains cocoa solids and cocoa butter in
+        varying proportions, without any added sugar. Powdered baking cocoa,
+        which contains more fiber than cocoa butter, can be processed with
+        alkali to produce dutch cocoa.
+
+        <br />
+        Much of the chocolate consumed today is in the form of sweet chocolate,
+        a combination of cocoa solids, cocoa butter or added vegetable oils, and
+        sugar. Milk chocolate is sweet chocolate that additionally contains milk
+        powder or condensed milk. White chocolate contains cocoa butter, sugar,
+        and milk, but no cocoa solids.
+      </p>
+      <a
+        href="https://en.wikipedia.org/wiki/Chocolate"
+        target="_blank"
+        class="learn-more"
+      >
+        Read more on wikipedia
+      </a>
+      <button class="buy-button">👉 Buy Hot Chocolate</button>
+      <p class="footer">
+        This page is built by
+        <a
+          href="https://github.com/alagbamoses-era"
+          target="_blank"
+          class="author"
+        >
+          Moses Agunbiade
+        </a>
+      </p>
+    </div>
+
+    <script>
+      function buy() {
+        let name = prompt("What is your name?");
+        let country = prompt("What country do you reside?");
+        let brand = prompt(
+          "What brand of hot chocolate is available in your area?"
+        );
+        let temp = prompt("What is the present temperature of your area?");
+
+        if (temp < 10) {
+          alert(
+            "Thank you " +
+              name +
+              ". You need to take a cup of " +
+              brand +
+              " hot chocolate"
+          );
+        } else {
+          alert(
+            "Thank you " +
+              name +
+              ". You don't need to take a cup of " +
+              brand +
+              " hot chocolate"
+          );
+        }
+      }
+      let buyButton = document.querySelector(".buy-button");
+      buyButton.addEventListener("click", buy);
+    </script>
+  </body>
+</html>
